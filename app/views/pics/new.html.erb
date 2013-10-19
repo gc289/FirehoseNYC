@@ -3,7 +3,9 @@
 	<h2 class="cool-font-small">Upload Your Stuff</h2>
 
 	<%= simple_form_for @pic do |f| %>
-		<%= f.input :hour , label: 'Which Hour?', placeholder: 'Enter the hour'	 %>
+		<%= f.input :hour, label: 'Which Hour?', placeholder: 'Enter the hour'	 %>
+		<%= f.input :image, :as => :file %>
+		
 		<%= f.input :emotion, label: 'How did you feel?', placeholder: 'Happy, Stoked, Awesome,...' %>
 		<%= f.input :learned, label: 'What did you learn?', placeholder: 'Installation, CSS, html, ruby,...', :input_html => {rows: '3'} %>
 
