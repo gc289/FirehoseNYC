@@ -3,6 +3,7 @@ Testapp1::Application.routes.draw do
   # first created -> highest priority.
 
     root :to => 'staticpage#index'
+    resources :pics
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
