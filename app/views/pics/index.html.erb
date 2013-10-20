@@ -3,37 +3,39 @@
 <h2 class="cool-font-big text-center">My Coding Journey</h2>
 
 	<div class="container">
-	<div class="row>"
+		<div class="row">
 
-		<% @pics.each do |pic| %>
-			<div class="boxy span3">
-				<h2>
-					Hour <%= pic.hour %>	
-				</h2>
+			<% @pics.each do |pic| %>
+				<div class="boxy span3">
+					<h2>
+						Hour <%= pic.hour %>	
+					</h2>
 
-				<div>
-					<%= image_tag pic.image.to_s %>
-				</div>
+					<div>
+						<%= image_tag pic.image.to_s %>
+					</div>
 
-				<p>
-					<%= pic.emotion %>
-				</p>	
+					<p>
+						<%= pic.emotion %>
+					</p>	
+				
+					<p>
+						I learned
+						<%= pic.learned %>
+					</p>	
 			
-				<p>
-					I learned
-					<%= pic.learned %>
-				</p>	
-		
-				<% if pic.user.present? %>
-				<p>
-					<b>Email:</b> <%= pic.user.email %>
-				</p>	
-				<% end %>
+					<% if pic.user.present? %>
+					<p>
+						<b>Email:</b> <%= pic.user.email %>
+					</p>	
+					<% end %>
 
 
-			</div>
-		<% end %>	
-	</div>
+				</div>
+			<% end %>
+
+
+		</div>
 	</div>
 </div>
 
