@@ -9,7 +9,11 @@
 		<%= f.input :emotion, label: 'How did you feel?', placeholder: 'Happy, Stoked, Awesome,...' %>
 		<%= f.input :learned, label: 'What did you learn?', placeholder: 'Installation, CSS, html, ruby,...', :input_html => {rows: '3'} %>
 
+		<br/>
+		<%= link_to 'Cancel', pics_path, :class=> 'btn btn-danger btn-large' %>
+
 		<%=submit_tag 'Submit', :class=> 'btn btn-danger btn-large' %>
+
 
 	<% end %>	
 
