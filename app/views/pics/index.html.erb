@@ -1,35 +1,39 @@
 <div class="custom-font">
 
-<h2 class="cool-font-big text-center">My Coding Journey</h2>
+<h2 class="cool-font-big text-center">My Coding Journey in One Weekend</h2>
 
-<% @pics.each do |pic| %>
-	<div class="boxy span3">
-			<h2>
-				Hour <%= pic.hour %>	
-			</h2>
+	<div class="container">
+	<div class="row>"
 
-			<div>
-				<%= image_tag pic.image.to_s %>
-			</div>
+		<% @pics.each do |pic| %>
+			<div class="boxy span3">
+				<h2>
+					Hour <%= pic.hour %>	
+				</h2>
 
-			<p>
-				<%= pic.emotion %>
-			</p>	
+				<div>
+					<%= image_tag pic.image.to_s %>
+				</div>
+
+				<p>
+					<%= pic.emotion %>
+				</p>	
 			
-			<p>
-				I learned
-				<%= pic.learned %>
-			</p>	
+				<p>
+					I learned
+					<%= pic.learned %>
+				</p>	
 		
-			<% if pic.user.present? %>
-			<p>
-				<b>Email:</b> <%= pic.user.email %>
-			</p>	
-			<% end %>
+				<% if pic.user.present? %>
+				<p>
+					<b>Email:</b> <%= pic.user.email %>
+				</p>	
+				<% end %>
 
 
-		</div>
-<% end %>
-
+			</div>
+		<% end %>	
+	</div>
+	</div>
 </div>
 
