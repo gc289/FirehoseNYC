@@ -10,7 +10,7 @@ class PicsController < ApplicationController
 	end
 
 	def create
-		@pic = Pic.create(params[:pic])
+		@pic = current_user.pics.create(params[:pic])
 		redirect_to pics_path
 	end
 	#action above is what happens when the user hits "Submit"
